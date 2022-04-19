@@ -14,10 +14,15 @@ public class Dialog : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(" COMPUTER SAYS: " + text);
-        textView.text = text;
-        dialogTree.dialog = transform;
 
+        //This happens the moment the dialog is activated
+
+        Debug.Log(" COMPUTER SAYS: " + text);
+        //display the text in the GUI
+        textView.text = text;
+        //let the tree know which is the current dialog
+        dialogTree.dialog = transform;
+        //place text into the two option buttons
         Abutton.text = AbuttonText;
         Zbutton.text = ZbuttonText;
     }
