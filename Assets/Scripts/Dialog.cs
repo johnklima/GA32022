@@ -11,6 +11,9 @@ public class Dialog : MonoBehaviour
     public string ZbuttonText = "Z button";
     public Text Abutton;
     public Text Zbutton;
+    public Image image;
+    public Sprite sprite;
+    public Transform cube;
 
     private void Awake()
     {
@@ -25,6 +28,24 @@ public class Dialog : MonoBehaviour
         //place text into the two option buttons
         Abutton.text = AbuttonText;
         Zbutton.text = ZbuttonText;
+
+        //place an image into the image box
+        if(sprite)
+        {
+            image.gameObject.SetActive(true);
+            image.sprite = sprite;
+            image.SetNativeSize();
+        }
+        else 
+        {
+            image.gameObject.SetActive(false);
+        }
+
+        if(cube)
+        {
+            cube.gameObject.SetActive(true);
+        }
+            
     }
 
     // Start is called before the first frame update

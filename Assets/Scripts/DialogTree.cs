@@ -8,6 +8,7 @@ public class DialogTree : MonoBehaviour
     public Transform dialog;
     public Button ButtonA;
     public Button ButtonZ;
+    
 
     // Start is called before the first frame update
     void Start()
