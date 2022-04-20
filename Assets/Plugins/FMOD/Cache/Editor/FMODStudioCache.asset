@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8656643250370026308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ITS FLEECE WAS BALCK AS COAL
+  m_EditorClassIdentifier: 
+  Path: event:/ITS FLEECE WAS BALCK AS COAL
+  Guid:
+    Data1: -340468130
+    Data2: 1265586333
+    Data3: -1902538101
+    Data4: -2068998350
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-6261790317315225706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MARY HAD A LITTLE LAMB
+  m_EditorClassIdentifier: 
+  Path: event:/MARY HAD A LITTLE LAMB
+  Guid:
+    Data1: 577516903
+    Data2: 1184792550
+    Data3: 1153515180
+    Data4: 833037864
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10350
 --- !u!114 &-1399150048440983263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +69,10 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637847592160724575
+  lastModified: 637860615894190162
   FileSizes:
   - Name: Desktop
-    Value: 746
+    Value: 926
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -37,12 +91,15 @@ MonoBehaviour:
   - {fileID: 2762416931481921844}
   EditorEvents:
   - {fileID: 4708649448700369173}
+  - {fileID: -6261790317315225706}
+  - {fileID: 4170645187663170851}
+  - {fileID: -8656643250370026308}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2762416931481921844}
   StringsBanks:
   - {fileID: -1399150048440983263}
-  cacheTime: 637847592160724575
+  cacheTime: 637860615894190162
   cacheVersion: 10
 --- !u!114 &2762416931481921844
 MonoBehaviour:
@@ -59,11 +116,38 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637847592160674724
+  lastModified: 637860615894140461
   FileSizes:
   - Name: Desktop
-    Value: 2801696
+    Value: 2962720
   Exists: 1
+--- !u!114 &4170645187663170851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ITS FLEECE WAS WHITE AS SNOW
+  m_EditorClassIdentifier: 
+  Path: event:/ITS FLEECE WAS WHITE AS SNOW
+  Guid:
+    Data1: 1062461911
+    Data2: 1302059772
+    Data3: -1990444633
+    Data4: -1569605395
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3450
 --- !u!114 &4708649448700369173
 MonoBehaviour:
   m_ObjectHideFlags: 0

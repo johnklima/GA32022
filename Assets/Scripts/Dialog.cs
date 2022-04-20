@@ -14,6 +14,7 @@ public class Dialog : MonoBehaviour
     public Image image;
     public Sprite sprite;
     public Transform cube;
+    
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class Dialog : MonoBehaviour
         Zbutton.text = ZbuttonText;
 
         //place an image into the image box
+        /*
         if(sprite)
         {
             image.gameObject.SetActive(true);
@@ -40,12 +42,13 @@ public class Dialog : MonoBehaviour
         {
             image.gameObject.SetActive(false);
         }
+        
 
         if(cube)
         {
             cube.gameObject.SetActive(true);
         }
-            
+        */
     }
 
     // Start is called before the first frame update
