@@ -14,7 +14,9 @@ public class DialogTree : MonoBehaviour
     void Start()
     {
       
-            transform.GetChild(0).gameObject.SetActive(true);
+            //transform.GetChild(0).gameObject.SetActive(true);
+
+            //get the first child in the tree
             dialog = transform.GetChild(0);
   
 
@@ -56,4 +58,5 @@ public class DialogTree : MonoBehaviour
             dialog.GetChild(1).gameObject.SetActive(true);
         }
     }
+ 
 }

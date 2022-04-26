@@ -69,10 +69,10 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637860615894190162
+  lastModified: 637864889846439761
   FileSizes:
   - Name: Desktop
-    Value: 926
+    Value: 968
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -94,12 +94,13 @@ MonoBehaviour:
   - {fileID: -6261790317315225706}
   - {fileID: 4170645187663170851}
   - {fileID: -8656643250370026308}
+  - {fileID: 3811165391155234202}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2762416931481921844}
   StringsBanks:
   - {fileID: -1399150048440983263}
-  cacheTime: 637860615894190162
+  cacheTime: 637864889846439761
   cacheVersion: 10
 --- !u!114 &2762416931481921844
 MonoBehaviour:
@@ -116,11 +117,38 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637860615894140461
+  lastModified: 637864889846389909
   FileSizes:
   - Name: Desktop
-    Value: 2962720
+    Value: 2981696
   Exists: 1
+--- !u!114 &3811165391155234202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BoxCollide
+  m_EditorClassIdentifier: 
+  Path: event:/BoxCollide
+  Guid:
+    Data1: -1028699267
+    Data2: 1171731602
+    Data3: -440676427
+    Data4: -654636116
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
 --- !u!114 &4170645187663170851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,4 +202,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 237599
+  Length: 224599

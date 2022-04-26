@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+
+//MARY HAD A LITTLE LAMB ITS FLEECE WAS WHITE AS SNOW EVERYWHERE THAT MARY WENT THE LAMB WAS SURE TO GO
+
 public class Dialog : MonoBehaviour
 {
     public string text = "default text";
