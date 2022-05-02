@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8656643250370026308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ITS FLEECE WAS BALCK AS COAL
-  m_EditorClassIdentifier: 
-  Path: event:/ITS FLEECE WAS BALCK AS COAL
-  Guid:
-    Data1: -340468130
-    Data2: 1265586333
-    Data3: -1902538101
-    Data4: -2068998350
-  Banks:
-  - {fileID: 2762416931481921844}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3000
 --- !u!114 &-6261790317315225706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +27,86 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 10350
+--- !u!114 &-5761771360611690954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Theme 1
+  m_EditorClassIdentifier: 
+  Name: Theme 1
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4109521105
+    data2: 86939410
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5734174222799986052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: 854778734
+    Data2: 1321943139
+    Data3: -181821000
+    Data4: 1355895564
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3995929523414149230}
+  - {fileID: -5761771360611690954}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 145200
+--- !u!114 &-4002816084153045294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BoxCollide2
+  m_EditorClassIdentifier: 
+  Path: event:/BoxCollide2
+  Guid:
+    Data1: 993847346
+    Data2: 1119206773
+    Data3: 94402214
+    Data4: -83650099
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
 --- !u!114 &-1399150048440983263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +122,10 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637864889846439761
+  lastModified: 637865777658041598
   FileSizes:
   - Name: Desktop
-    Value: 968
+    Value: 1150
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -93,15 +146,44 @@ MonoBehaviour:
   - {fileID: 4708649448700369173}
   - {fileID: -6261790317315225706}
   - {fileID: 4170645187663170851}
-  - {fileID: -8656643250370026308}
   - {fileID: 3811165391155234202}
+  - {fileID: 308444324413480990}
+  - {fileID: -4002816084153045294}
+  - {fileID: -5734174222799986052}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2762416931481921844}
   StringsBanks:
   - {fileID: -1399150048440983263}
-  cacheTime: 637864889846439761
+  cacheTime: 637865777658041598
   cacheVersion: 10
+--- !u!114 &308444324413480990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ITS FLEECE WAS BLACK AS COAL
+  m_EditorClassIdentifier: 
+  Path: event:/ITS FLEECE WAS BLACK AS COAL
+  Guid:
+    Data1: -340468130
+    Data2: 1265586333
+    Data3: -1902538101
+    Data4: -2068998350
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &2762416931481921844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,10 +199,10 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637864889846389909
+  lastModified: 637865777657991729
   FileSizes:
   - Name: Desktop
-    Value: 2981696
+    Value: 6444448
   Exists: 1
 --- !u!114 &3811165391155234202
 MonoBehaviour:
@@ -149,6 +231,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &3995929523414149230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Theme 2
+  m_EditorClassIdentifier: 
+  Name: Theme 2
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3331659439
+    data2: 3965292759
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4170645187663170851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,5 +307,5 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 15
   Length: 224599
