@@ -37,7 +37,9 @@ public class PlayerController : MonoBehaviour
 	{
 		cameraT = Camera.main.transform; // Camera initial transform cache
 		controller = GetComponent<CharacterController>(); // Fetching the component at Start() to keep the variables private, less room for error.
-	}
+	
+        
+    }
 
     void Update()
     {
