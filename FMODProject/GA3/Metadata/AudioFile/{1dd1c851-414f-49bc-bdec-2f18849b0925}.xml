@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{1dd1c851-414f-49bc-bdec-2f18849b0925}">
+		<property name="assetPath">
+			<value>263126__pan14__tone-beep-lower-slower.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.29113378684807256</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e152492c-69ad-4993-872e-295906442c64}</destination>
+		</relationship>
+	</object>
+</objects>

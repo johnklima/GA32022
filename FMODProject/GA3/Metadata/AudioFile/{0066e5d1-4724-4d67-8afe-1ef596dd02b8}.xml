@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{0066e5d1-4724-4d67-8afe-1ef596dd02b8}">
+		<property name="assetPath">
+			<value>535481__xhale303__braams-drone.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>44.927999999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e152492c-69ad-4993-872e-295906442c64}</destination>
+		</relationship>
+	</object>
+</objects>
