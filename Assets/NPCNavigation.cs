@@ -2,34 +2,81 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.UI;
 public class NPCNavigation : MonoBehaviour
 {
-
+    public NPCBehaviour behaviour;
     public NavMeshAgent agent;
     public Transform returnPoint;
+    public Text TextBox;
+    public string text;
 
+    //
+    public void Awake()
+    {
+        agent.SetDestination(transform.position);
+    }
     // Start is called before the first frame update
+    public void initiate()
+    {        
+        agent.SetDestination(transform.position);
+        TextBox.text = text;
+        Debug.Log(transform.name);
 
+    }
     // Update is called once per frame
     private void Update()
     {
+
+        Transform child;
         //when we arrive at our destination, we activate our chosen child
         //in the simple case,there is only one child.
         if (agent.remainingDistance < 1.0f)
         {
-            //do i have a child?
-            if (transform.childCount > 0)
+            //do i have a children?
+           if(transform.childCount > 1)
+           {
+                //choose which path to follow
+                
+                if(behaviour.Food < 0.3f)
+                {
+                    child = transform.GetChild(0);
+                    
+                    //this is all working fine, as I treverse the tree first time
+                    child.gameObject.SetActive(true);
+
+                    child.GetComponent<NPCNavigation>().initiate();
+
+                    behaviour.Food = 1.0f;
+
+                }
+                else if(behaviour.Pee > 0.7f)
+                {
+                    child = transform.GetChild(1);                    
+                    //this is all working fine, as I treverse the tree first time
+                    child.gameObject.SetActive(true);
+                    child.GetComponent<NPCNavigation>().initiate();
+
+                    behaviour.Pee = 0.0f;
+                }
+                else
+                { 
+                    //do nothing
+                
+                }
+
+            }
+            else if (transform.childCount > 0)
             {
                 //YES
                 //set active should do the job, but somehow the tree traversal
                 //is calling this all down the tree, so we must first set the new destination
                 //before activating the node.
-                agent.SetDestination(transform.GetChild(0).position);
-
+                child = transform.GetChild(0);
                 //this is all working fine, as I treverse the tree first time
-                transform.GetChild(0).gameObject.SetActive(true);
-                
+                child.gameObject.SetActive(true);
+                child.GetComponent<NPCNavigation>().initiate();
+
             }
             else
             {
@@ -51,11 +98,6 @@ public class NPCNavigation : MonoBehaviour
 
             }
         }
-    }
-    private void Awake()
-    {
-        //on awake, or enabled, we set the nav agent to go to our point in space.
-        agent.SetDestination(transform.position);
     }
     
     public void resetPoint()
