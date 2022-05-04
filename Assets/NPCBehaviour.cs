@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPCBehaviour : MonoBehaviour
 {
@@ -11,10 +12,10 @@ public class NPCBehaviour : MonoBehaviour
     public NPCNavigation navtree;
     public float Food = 1.0f;
     public float Pee = 0.0f;
-
+    public Transform destinationObject;
     void Start()
     {
-        
+        transform.GetComponent<NavMeshAgent>().SetDestination(destinationObject.position);
     }
 
     // Update is called once per frame

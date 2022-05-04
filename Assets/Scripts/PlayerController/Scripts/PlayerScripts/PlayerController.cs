@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
 	Transform cameraT;
 	CharacterController controller;
 
+
+    public float forward = 0;
+    public float side = 0;
+
     [Header("Character Movement Check")]
     public bool isMoving;
 
@@ -45,6 +49,12 @@ public class PlayerController : MonoBehaviour
     {
         // input detection
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if (forward != 0)
+            input.y = forward;
+        if (side != 0)
+            input.x = side;
+        
         Vector2 inputDir = input.normalized;
         bool running = Input.GetKey(KeyCode.LeftShift);
         

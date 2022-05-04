@@ -11,89 +11,83 @@ public class NPCNavigation : MonoBehaviour
     public Text TextBox;
     public string text;
 
-    //
-    public void Awake()
-    {
-        agent.SetDestination(transform.position);
-    }
-    // Start is called before the first frame update
-    public void initiate()
-    {        
-        agent.SetDestination(transform.position);
-        TextBox.text = text;
-        Debug.Log(transform.name);
-
-    }
+    public float waitTime = 3.0f;
+    public float waitTimer = -1;
+    
+   
     // Update is called once per frame
     private void Update()
     {
+        //if the node is not the npcs destination node I have nothing to do
+        //get out (exit the function aka "return")
+        if (transform != behaviour.destinationObject)
+            return;  
 
         Transform child;
+        float dist = agent.remainingDistance;                       
+
         //when we arrive at our destination, we activate our chosen child
         //in the simple case,there is only one child.
-        if (agent.remainingDistance < 1.0f)
+        if (dist < 1.0f)        
         {
-            //do i have a children?
-           if(transform.childCount > 1)
-           {
-                //choose which path to follow
-                
-                if(behaviour.Food < 0.3f)
-                {
-                    child = transform.GetChild(0);
-                    
-                    //this is all working fine, as I treverse the tree first time
-                    child.gameObject.SetActive(true);
-
-                    child.GetComponent<NPCNavigation>().initiate();
-
-                    behaviour.Food = 1.0f;
-
-                }
-                else if(behaviour.Pee > 0.7f)
-                {
-                    child = transform.GetChild(1);                    
-                    //this is all working fine, as I treverse the tree first time
-                    child.gameObject.SetActive(true);
-                    child.GetComponent<NPCNavigation>().initiate();
-
-                    behaviour.Pee = 0.0f;
-                }
-                else
-                { 
-                    //do nothing
-                
-                }
-
-            }
-            else if (transform.childCount > 0)
+            
+            //set the wait timer and get out
+            if(waitTimer < 0)
             {
-                //YES
-                //set active should do the job, but somehow the tree traversal
-                //is calling this all down the tree, so we must first set the new destination
-                //before activating the node.
-                child = transform.GetChild(0);
-                //this is all working fine, as I treverse the tree first time
+                waitTimer = Time.time;
+                return;
+            }
+            //get out if the time has not expire
+            if (Time.time - waitTimer < waitTime)
+            {
+                return;
+            }
+
+            //otherwise, process the node  
+
+            //do i have a children?
+            if (transform.childCount > 1) // I have two (or more) children
+           {
+                //choose which path to follow.
+                int which = 0;
+
+                if (behaviour.Food < 0.3f)
+                {
+                    which = 0;
+                    behaviour.Food = 1.0f;
+                }                    
+                else if (behaviour.Pee > 0.5f)
+                {
+                    which = 1;
+                    behaviour.Pee = 0.0f;
+                }                    
+                else
+                {
+                    return;
+                }
+                    
+                             
+
+                child = transform.GetChild(which);
                 child.gameObject.SetActive(true);
                 child.GetComponent<NPCNavigation>().initiate();
-
-            }
-            else
-            {
-                //NO! in which case i better have a return node to loop on.
+           }
+           else if (transform.childCount > 0)  //one child, just go there
+           {              
                 
-                //here I want to set the first destination, which i am calling
-                //the return point, and i want to turn myself off as I have no children.
-                agent.SetDestination(returnPoint.position);
-                
+                child = transform.GetChild(0);
+                child.gameObject.SetActive(true);
+                child.GetComponent<NPCNavigation>().initiate();
+               
+           }
+           else  // no children, go to the return node
+           {
                 //turn off everyone else from the return node on down recursively
                 returnPoint.GetComponent<NPCNavigation>().resetPoint();
-
-                //turn myself off just to be sure.
-                gameObject.SetActive(false);
-
+                
                 //enable the return point, so it can do its thing
                 returnPoint.gameObject.SetActive(true);
+                returnPoint.GetComponent<NPCNavigation>().initiate();
 
 
             }
@@ -109,6 +103,15 @@ public class NPCNavigation : MonoBehaviour
         
         //disable recursively, exiting the recursion at me.
         transform.gameObject.SetActive(false);
+    }
+
+    public void initiate()
+    {
+        waitTimer = -1;
+        behaviour.destinationObject = transform;
+        agent.SetDestination(transform.position);
+        TextBox.text = text;
+       
     }
 
 }
