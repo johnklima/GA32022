@@ -50,23 +50,12 @@ public class NPCNavigation : MonoBehaviour
            {
                 //choose which path to follow.
                 int which = 0;
-
-                if (behaviour.Food < 0.3f)
-                {
+                if (behaviour.state == NPCBehaviour.STATE.hungry)
                     which = 0;
-                    behaviour.Food = 1.0f;
-                }                    
-                else if (behaviour.Pee > 0.5f)
-                {
+                else if (behaviour.state == NPCBehaviour.STATE.overwatered)
                     which = 1;
-                    behaviour.Pee = 0.0f;
-                }                    
                 else
-                {
                     return;
-                }
-                    
-                             
 
                 child = transform.GetChild(which);
                 child.gameObject.SetActive(true);

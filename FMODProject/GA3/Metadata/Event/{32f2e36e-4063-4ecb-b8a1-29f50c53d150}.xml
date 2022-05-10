@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{32f2e36e-4063-4ecb-b8a1-29f50c53d150}">
 		<property name="name">
-			<value>Music</value>
+			<value>MusicOld</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -136,7 +136,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{dfaa3cd1-5c2e-452d-8363-35a9af3376f8}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Theme1</value>
 		</property>
 		<relationship name="automators">
 			<destination>{4e902dde-f96d-4565-984a-877d435a3f72}</destination>
@@ -166,7 +166,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{c4b6f844-ccbc-454a-99ab-82a8c81862a3}">
 		<property name="name">
-			<value>Audio 2</value>
+			<value>Theme2</value>
 		</property>
 		<relationship name="automators">
 			<destination>{6cc399d4-b1cc-4db0-a59e-c362da36cb9b}</destination>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraContoller : MonoBehaviour
 {
@@ -43,6 +44,17 @@ public class CameraContoller : MonoBehaviour
     private bool isPlayerMoving;
     private PlayerController playerController;
 
+    private bool isPointerOverUIObject()
+    {
+
+
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 1; //ignore panel which is always full screen alpha 0
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,11 +73,20 @@ public class CameraContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         // Breathing
         CameraBreathMovement();
     }
 
-    private void LateUpdate() {
+    private void LateUpdate() 
+    {
+        if (isPointerOverUIObject())
+        {
+            Debug.Log("exit camera");
+            return;
+        }
+
         CameraMovement();
     }
 

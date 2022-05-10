@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,6 +38,17 @@ public class PlayerController : MonoBehaviour
     [Header("Camera Setting")]
     public bool bUseCameraControlRotation; // makes it so the rotation of the capsule follows the camera, Turning it off will make it so you can rotate with your camera without your character turning too.
 
+    private bool isPointerOverUIObject()
+    {
+
+
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0; //ignore panel which is always full screen alpha 0
+    }
+
     void Start()
 	{
 		cameraT = Camera.main.transform; // Camera initial transform cache
@@ -47,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
+
         // input detection
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
