@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8426470361400592413
+--- !u!114 &-8775179876031077883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MusicTest/ToIntroAmbient
+  m_Name: parameter:/Footsteps/Sidewalk
   m_EditorClassIdentifier: 
-  Name: ToIntroAmbient
+  Name: Sidewalk
   StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 600267684
-    data2: 1410147437
+    data1: 370814915
+    data2: 4157473685
   Type: 0
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-8027741973965649274
+--- !u!114 &-7833184717171832331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,16 +34,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AmbientMusic/Ambient2Play
+  m_Name: parameter:/Footsteps/Street
   m_EditorClassIdentifier: 
-  Name: Ambient2Play
+  Name: Street
   StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 2395141184
-    data2: 3472354636
+    data1: 3292879147
+    data2: 1647837621
   Type: 0
   IsGlobal: 0
   Labels: []
@@ -75,7 +75,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 10350
---- !u!114 &-6109594391297160042
+--- !u!114 &-5867103727266458317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,21 +84,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MusicTest/ToBigSoundA1
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps
   m_EditorClassIdentifier: 
-  Name: ToBigSoundA1
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3945701068
-    data2: 1914556328
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/Footsteps
+  Guid:
+    Data1: 202106688
+    Data2: 1180808173
+    Data3: -1080805996
+    Data4: 1084256012
+  Banks:
+  - {fileID: 2762416931481921844}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8775179876031077883}
+  - {fileID: -606016185912247151}
+  - {fileID: -7833184717171832331}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &-4002816084153045294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,30 +156,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2106419998605959344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AmbientMusic/Ambient1Play
-  m_EditorClassIdentifier: 
-  Name: Ambient1Play
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1601256291
-    data2: 859641104
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-1399150048440983263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,10 +171,34 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637877008990614416
+  lastModified: 637878729576563170
   FileSizes:
   - Name: Desktop
-    Value: 1678
+    Value: 1328
+  Exists: 1
+--- !u!114 &-606016185912247151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Grass
+  m_EditorClassIdentifier: 
+  Name: Grass
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3732536686
+    data2: 1711647676
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -216,15 +222,14 @@ MonoBehaviour:
   - {fileID: 3811165391155234202}
   - {fileID: 308444324413480990}
   - {fileID: -4002816084153045294}
-  - {fileID: 3662394580230121142}
   - {fileID: 3444783701457216787}
-  - {fileID: 8678075956745314648}
+  - {fileID: -5867103727266458317}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2762416931481921844}
   StringsBanks:
   - {fileID: -1399150048440983263}
-  cacheTime: 637877008990614416
+  cacheTime: 637878729576563170
   cacheVersion: 10
 --- !u!114 &308444324413480990
 MonoBehaviour:
@@ -268,34 +273,10 @@ MonoBehaviour:
   Path: FMODProject/GA3/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637877008990549416
+  lastModified: 637878729576385510
   FileSizes:
   - Name: Desktop
-    Value: 9489024
-  Exists: 1
---- !u!114 &3019847503498920538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MusicTest/ToReallyBigSoundA2
-  m_EditorClassIdentifier: 
-  Name: ToReallyBigSoundA2
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2775394397
-    data2: 1062192365
-  Type: 0
-  IsGlobal: 0
-  Labels: []
+    Value: 6447232
   Exists: 1
 --- !u!114 &3444783701457216787
 MonoBehaviour:
@@ -326,61 +307,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 145200
---- !u!114 &3644692573350278012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AmbientMusic/Intro
-  m_EditorClassIdentifier: 
-  Name: Intro
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2133750516
-    data2: 2247166827
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3662394580230121142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MusicTest
-  m_EditorClassIdentifier: 
-  Path: event:/MusicTest
-  Guid:
-    Data1: -1148338348
-    Data2: 1272712877
-    Data3: -1249501510
-    Data4: -1171869371
-  Banks:
-  - {fileID: 2762416931481921844}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -6109594391297160042}
-  - {fileID: 6366246813945970238}
-  - {fileID: -8426470361400592413}
-  - {fileID: 3019847503498920538}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 259940
 --- !u!114 &3811165391155234202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,30 +388,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 15
   Length: 224599
---- !u!114 &4712442714137217994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AmbientMusic/Ambient1BigSound
-  m_EditorClassIdentifier: 
-  Name: Ambient1BigSound
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3736624304
-    data2: 3372083539
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &6322732718907731916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,86 +408,6 @@ MonoBehaviour:
   ID:
     data1: 4109521105
     data2: 86939410
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &6366246813945970238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MusicTest/Ambient1On
-  m_EditorClassIdentifier: 
-  Name: Ambient1On
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3494855746
-    data2: 462869454
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &8678075956745314648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/AmbientMusic
-  m_EditorClassIdentifier: 
-  Path: event:/AmbientMusic
-  Guid:
-    Data1: -1289240651
-    Data2: 1144609643
-    Data3: -1069050486
-    Data4: 1446245538
-  Banks:
-  - {fileID: 2762416931481921844}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 9214776237658758908}
-  - {fileID: -2106419998605959344}
-  - {fileID: -8027741973965649274}
-  - {fileID: 3644692573350278012}
-  - {fileID: 4712442714137217994}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 257440
---- !u!114 &9214776237658758908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AmbientMusic/Ambient2BigSound
-  m_EditorClassIdentifier: 
-  Name: Ambient2BigSound
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2312620493
-    data2: 2849151846
   Type: 0
   IsGlobal: 0
   Labels: []

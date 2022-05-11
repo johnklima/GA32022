@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{3fdecf19-d204-4a14-9839-1f7ae445858f}">
+		<property name="name">
+			<value>Sidewalk</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf9ba9a3-e93a-4e74-9a0b-1318204fb4b7}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e6aa905e-6331-4eac-b809-92ca874ffc1a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e6aa905e-6331-4eac-b809-92ca874ffc1a}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
