@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/PolygonTown/Scenes/Demo.unity
-    guid: 54e9644b66e21b441b9a6eb04b6dad58
+    path: Assets/Scenes/AdditiveMain.unity
+    guid: 88f2bdbfdd51b264593571453cc57416
   - enabled: 1
-    path: Assets/PolygonTown/Scenes/Characters.unity
-    guid: a063ae1e2b69208489924b6814ebddc1
+    path: Assets/Scenes/Additive0.unity
+    guid: a16585f3ea858974c9160ce12e5c590c
+  - enabled: 1
+    path: Assets/Scenes/Additive1.unity
+    guid: 6f75788b578728244b52cf10456677fd
+  - enabled: 1
+    path: Assets/Scenes/Single2.unity
+    guid: 2a1eef0be34e92643b89a18fbf45f96e
   m_configObjects: {}
